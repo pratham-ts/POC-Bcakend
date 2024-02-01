@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.get("/ping", (req, res) => {
-  res.send("server is running", process.env.APP_PORT_NUMBER);
+  res.send(`server is running ${process.env.APP_PORT_NUMBER}`);
 });
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
